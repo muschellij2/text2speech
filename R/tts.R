@@ -376,20 +376,22 @@ tts_coqui <- function(
   base_tts_args <-
     paste0(
       "--model_name", " ", model_name, " ",
-      ifelse(!is.null(vocoder_name), paste0("--vocoder_name", " ", vocoder_name),
-             "")
+      ifelse(!is.null(vocoder_name),
+             paste0("--vocoder_name", " ", vocoder_name),
+             ""),
+      " "
     )
 
   # Iterate coqui tts over text
-  res = lapply(text, function(string) {
+  res <- lapply(text, function(string) {
     string_processed = tts_split_text(string, limit = limit)
 
     res = vapply(string_processed, function(tt) {
       output_path = tts_temp_audio(audio_type)
       tts_args <- paste0(
         base_tts_args,
-        " ", "--text", " ", shQuote(tt), " ",
-        " ", "--out_path ", output_path)
+        "--text", " ", shQuote(tt), " ",
+        "--out_path ", output_path)
       # # Run command with temporary system search path
       res <- withr::with_path(process_coqui_path(exec_path),
                               system2("tts", tts_args))
