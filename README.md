@@ -20,15 +20,14 @@ packages:
   Polly](https://docs.aws.amazon.com/polly/latest/dg/what-is.html)
 - [googleLanguageR](https://github.com/ropensci/googleLanguageR) is a
   client to the [Google Cloud Text-to-Speech
-  API](https://cloud.google.com/text-to-speech/)
+  API](https://cloud.google.com/text-to-speech)
 - [conrad](https://github.com/fhdsl/conrad) is a client to the
   [Microsoft Cognitive Services Text to Speech REST
   API](https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-text-to-speech?tabs=streaming)
 
 You might notice Coqui TTS doesn’t have its own R package. This is
 because, at this time, text2speech directly incorporates the
-functionality of Coqui TTS. The R wrapper of Coqui is [under
-development](https://github.com/howardbaek/ribbit).
+functionality of Coqui TTS.
 
 ## Installation
 
