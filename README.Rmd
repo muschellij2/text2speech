@@ -13,12 +13,21 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r, include = FALSE}
+tts_path = normalizePath("~/miniconda3/bin/tts")
+if (file.exists(tts_path)) {
+  text2speech::set_coqui_path(tts_path)
+}
+```
+
+
 # Overview
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/jhudsl/text2speech/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jhudsl/text2speech/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of text2speech is to harmonize various text-to-speech engines, including Amazon Polly, Coqui TTS, Google Cloud Text-to-Speech API, and Microsoft Cognitive Services Text to Speech REST API. 
+The goal of `text2speech` is to harmonize various text-to-speech engines, including Amazon Polly, Coqui TTS, Google Cloud Text-to-Speech API, and Microsoft Cognitive Services Text to Speech REST API. 
 
 With the exception of Coqui TTS, all these engines are accessible as R packages:
 
