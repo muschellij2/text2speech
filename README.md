@@ -88,8 +88,6 @@ head(voices_amazon)
 
 # Coqui TTS
 voices_coqui <- tts_coqui_voices()
-#> Warning in system("tts --list_models", intern = TRUE): running command 'tts
-#> --list_models' had status 1
 #> ℹ Test out different voices on the CoquiTTS Demo (<https://huggingface.co/spaces/coqui/CoquiTTS>)
 head(voices_coqui)
 #> # A tibble: 0 × 5
