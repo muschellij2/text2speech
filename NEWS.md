@@ -1,3 +1,7 @@
+# text2speech 1.1.0
+
+* Fixes for links.
+
 # text2speech 1.0.0
 
 * Added Coqui TTS as a text-to-speech engine to `tts()` and `tts_voices()`
