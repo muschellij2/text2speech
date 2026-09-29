@@ -1,4 +1,4 @@
-#' Convert PCM to WAV
+#' Convert PCM to Wav
 #'
 #' Accepts PCM audio data as input and generates a corresponding Wav file
 #'

@@ -2,7 +2,7 @@
 % Please edit documentation in R/pcm_to_wav.R
 \name{pcm_to_wav}
 \alias{pcm_to_wav}
-\title{Convert PCM to WAV}
+\title{Convert PCM to Wav}
 \usage{
 pcm_to_wav(
   input,
